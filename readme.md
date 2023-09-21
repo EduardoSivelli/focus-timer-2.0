@@ -5,7 +5,7 @@
 
 Este é um projeto realizado através da plataforma RocketSeatOne (explorer), onde fui capaz de desenvolver minhas habilidades com o JavaScript 
 
-![image](https://i.imgur.com/t00zpmx.png)
+![image](https://i.imgur.com/GAoPVlm.png)
 
 ## Techs
 
@@ -25,7 +25,7 @@ Usando a extensão Lighthouse do Google na home, verica-se as melhores práticas
 
 (Essas métricas variam de acordo com várias situações, em geral medem Performance, Accessibility, Best Patrices e SEO da sessão em questão)
 
-![image]()
+![image](https://i.imgur.com/lPRayzk.png)
 
 ## Funcionalidades
 
@@ -41,7 +41,7 @@ Trocar de som e cor ao clicar nos botões e não tocar 2 sons ao mesmo tempo.
 
 Reconhecendo que um código pode e deve estar sempre sendo refatorado e melhorado, segue o link para a fácil verificação do site online.
 
-
+https://focus-timer-2-0-iota.vercel.app/
 
 ## How to local run
 
