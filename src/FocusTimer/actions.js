@@ -21,57 +21,90 @@ export function reset(){
 export function add() {
   timer.addMinutes()
   sounds.buttonPressAudio.play()
-  console.log("add function")
+  
 }
 
 export function remove() {
   timer.removeMinutes()
   sounds.buttonPressAudio.play()
-  console.log("remove function")
+  
 }
 
-export function toggleMusicFlorest(){
-  state.isMute = document.documentElement.classList.toggle('music-on')
-  color.florestColor()
-  if(state.isMute){
-    sounds.florestAudio.play()
-    
-    return
-  }
-  sounds.florestAudio.pause()
-  
-  console.log("music-toggle-flores function")
-}
 
-export function toggleMusicRain(){
-  state.isMute = document.documentElement.classList.toggle('music-on')
+export function toggleMusic(currentSound){
   
-  if(state.isMute){
-    sounds.rainAudio.play()
-    return
+  
+  if(currentSound === "ph-tree"){
+    state.isFlorestMute = document.documentElement.classList.toggle('florest-music-on')
+    document.documentElement.classList.remove('rain-music-on', 'coffeeshop-music-on', 'fire-music-on')
+    if(state.isFlorestMute){
+      sounds.rainAudio.pause()
+      color.rainRemoveColor()
+      sounds.florestAudio.play()
+      color.florestAddColor()
+      sounds.coffeeShopAudio.pause()
+      color.coffeeShopRemoveColor()
+      sounds.fireAudio.pause()
+      color.fireRemoveColor()
+      return
+    }
+    sounds.florestAudio.pause()
+    color.florestRemoveColor()
   }
-  sounds.rainAudio.pause()
-  console.log("music-toggle-chuv function")
-}
 
-export function toggleMusicCoffeeShop(){
-  state.isMute = document.documentElement.classList.toggle('music-on')
-  
-  if(state.isMute){
-    sounds.coffeeShopAudio.play()
-    return
+  if(currentSound === "ph-cloud-rain"){
+    state.isRainMute = document.documentElement.classList.toggle('rain-music-on')
+    document.documentElement.classList.remove('florest-music-on', 'fire-music-on', 'coffeeshop-music-on')
+    if(state.isRainMute){
+      sounds.florestAudio.pause()
+      color.florestRemoveColor()
+      sounds.rainAudio.play()
+      color.rainAddColor()
+      sounds.coffeeShopAudio.pause()
+      color.coffeeShopRemoveColor()
+      sounds.fireAudio.pause()
+      color.fireRemoveColor()
+      return
+    }
+    sounds.rainAudio.pause()
+    color.rainRemoveColor()
   }
-  sounds.coffeeShopAudio.pause()
-  console.log("music-toggle-cafe function")
-}
 
-export function toggleMusicFire(){
-  state.isMute = document.documentElement.classList.toggle('music-on')
-  
-  if(state.isMute){
-    sounds.fireAudio.play()
-    return
+  if(currentSound === "ph-storefront"){
+    state.isCoffeeShopMute = document.documentElement.classList.toggle('coffeeshop-music-on')
+    document.documentElement.classList.remove('florest-music-on', 'rain-music-on', 'fire-music-on')
+    if(state.isCoffeeShopMute){
+      sounds.florestAudio.pause()
+      color.florestRemoveColor()
+      sounds.rainAudio.pause()
+      color.rainRemoveColor()
+      sounds.coffeeShopAudio.play()
+      color.coffeeShopAddColor()
+      sounds.fireAudio.pause()
+      color.fireRemoveColor()
+      
+      return
+    }
+    sounds.coffeeShopAudio.pause()
+    color.coffeeShopRemoveColor()
   }
-  sounds.fireAudio.pause()
-  console.log("music-toggle-fog function")
+
+  if(currentSound === "ph-fire"){
+    state.isFireMute = document.documentElement.classList.toggle('fire-music-on')
+    document.documentElement.classList.remove('florest-music-on', 'coffeeshop-music-on', 'rain-music-on')
+    if(state.isFireMute){
+      sounds.florestAudio.pause()
+      color.florestRemoveColor()
+      sounds.rainAudio.pause()
+      color.rainRemoveColor()
+      sounds.fireAudio.play()
+      color.fireAddColor()
+      sounds.coffeeShopAudio.pause()
+      color.coffeeShopRemoveColor()
+      
+      return
+    }
+    sounds.fireAudio.pause()
+    color.fireRemoveColor()
+  }
 }

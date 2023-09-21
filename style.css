@@ -6,8 +6,8 @@
 }
 
 :root {
-  --bg-color: hsl(194, 5%, 7%);
-  --text-color: hsl(194, 40%, 98%);
+  --bg-color: hsl(194, 40%, 98%);
+  --text-color: hsl(194, 5%, 7%);
   --primary-color: hsl(281, 100%, 63%);
   --secondary-color: hsl(79, 65%, 62%);
   --controls-bg-color: hsl(194, 0%, 14%);
@@ -16,15 +16,15 @@
   --button-florest: hsl(79, 97%, 31%);
   --button-store: hsl(299, 95%, 46%);
   --button-fire: hsl(29, 94%, 44%);
-  --button-pattern: hsl(194, 0%, 14%);
+  --button-pattern: hsl(240, 15%, 86%);
 
   font-size: clamp(40%, 1% + 2vw, 63.5%)
 }
 
 html.light {
-  --text-color: hsl(194, 5%, 7%);
-  --bg-color: hsl(194, 40%, 98%);
-  --button-pattern: hsl(240, 15%, 86%);
+  --text-color: hsl(194, 40%, 98%); 
+  --bg-color: hsl(194, 5%, 7%);
+  --button-pattern: hsl(194, 0%, 14%);
   
 }
 

@@ -13,10 +13,11 @@ export function registerControls(){
 
   sounds.addEventListener('click', (event) => {
     const action = event.target.dataset.action
+    
     if( typeof actions[action] != "function") {
       return
     }
     
-    actions[action]()
+    actions[action](event.target.classList[1])
   })
 }

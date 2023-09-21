@@ -6,7 +6,7 @@ export const seconds = document.getElementById('seconds')
 
 export const btnplus = document.getElementsByClassName('ph-plus-circle')
 
-export const florestBtn = document.getElementsByClassName('ph-tree')
-export const rainBtn = document.getElementsByClassName('ph-cloud-rain')
-export const coffeeShopBtn = document.getElementsByClassName('ph-storefront')
-export const fireBtn = document.getElementsByClassName('ph-fire')
+export const florestBtn = document.querySelector('.ph-tree')
+export const rainBtn = document.querySelector('.ph-cloud-rain')
+export const coffeeShopBtn = document.querySelector('.ph-storefront')
+export const fireBtn = document.querySelector('.ph-fire')

@@ -2,5 +2,9 @@ export default {
   minutes: 25,
   seconds: 0,
   isRunning: false,
-  isMute: true
+  isMute: true,
+  isRainMute: true, 
+  isFlorestMute: true,
+  isFireMute: true,
+  isCoffeeShopMute: true,
 }
